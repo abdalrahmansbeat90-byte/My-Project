@@ -31,4 +31,7 @@ var number = 22
 
     val myNumber = 288888888888888L
 
+
+    print("Number is $myNumber")
+
 }
