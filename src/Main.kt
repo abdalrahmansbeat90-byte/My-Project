@@ -41,4 +41,21 @@ println("result 1 = $result")
     println("x = ${x--}")
     println("x = ${--x}")
 
+   /* val isActive = false
+     if(isActive==true){
+         println("The user is Active")
+     }
+  else {
+      println("The user is not Active")
+
+     }
+*/
+    val myNumber = 100
+    if(myNumber<150){
+        println("True")
+    }
+    else {
+        println("False")
+
+    }
 }
