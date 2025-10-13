@@ -1,8 +1,21 @@
 import kotlin.math.hypot
-fun main(){
-    val myNumber = 2F
-    val mySecondNumber : Double= 2.0
+fun main() {
+    val myCharValue: Char = 'D'
+    val myBooleanValuealue: Boolean = false
 
-    println("myNumber = $myNumber and mySecondNumber = $mySecondNumber")
+
+
+
+   /*
+
+    val myCharValue = 'D'
+    val myBooleanValuealue = false
+
+    */
+
+    println("myCharvalue = $myCharValue \n and \n myBooleanValuealue is $myBooleanValuealue")
+
+
+
 
 }
