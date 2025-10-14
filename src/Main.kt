@@ -1,61 +1,17 @@
 import kotlin.math.hypot
 fun main() {
-  var x = 5
-  val y = 3
+    val myNumber = 150
 
-
-    println("x + y = ${x+y}")
-    println("x - y = ${x-y}")
-    println("x * y = ${x*y}")
-    println("x / y = ${x/y}")
-    println("x % y = ${x%y}")
-
-    var result = x+y
-
-    result += 2
-println("result 1 = $result")
-
-
-    result -= 2
-    println("result 2 = $result")
-
-
-    result *= 2
-    println("result 3 = $result")
-
-
-    result /= 2
-    println("result 4 = $result")
-
-
-    result %= 2
-    println("result 5 = $result")
-
-
-    println("( 3 + 3 ) * 4 = ${( 3 + 3 ) * 4 }")
-
-    x = 0
-    println("x = ${x++}")
-    println("x + ${ ++x } ")
-
-    println("x = ${x--}")
-    println("x = ${--x}")
-
-   /* val isActive = false
-     if(isActive==true){
-         println("The user is Active")
-     }
-  else {
-      println("The user is not Active")
-
-     }
-*/
-    val myNumber = 100
-    if(myNumber<150){
-        println("True")
+    if (myNumber >= 150 ) {
+        println("greater than 150")
     }
-    else {
-        println("False")
-
+else if (myNumber > 90 ) {
+    println("greater than 90")
+}
+    else{
+        println("All the coditions failed")
     }
+
+
+
 }
