@@ -1,16 +1,22 @@
-import kotlin.math.hypot
-fun main(args: Array<String>) {
+fun main() {
+    val num = 5
 
-val alarm = 7
 
-    val text = when {
-        alarm <= 10  -> "The Time is in the range 1..10"
-        alarm == 8 || alarm == 7  -> "The time is $alarm"
-        else  -> "The time is $alarm"
+    if (num > 10) {
+        println("Number is greater than 10")
+    } else if (num == 10) {
+        println("Number is equal to 10")
+    } else {
+        println("Number is less than 10")
     }
-        println("The time is")
 
 
-    println(text)
+    val day = 3
+    when (day) {
+        1 -> println("Monday")
+        2 -> println("Tuesday")
+        3 -> println("Wednesday")
+        else -> println("Other day")
+    }
+}
 
-  }
