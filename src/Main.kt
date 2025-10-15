@@ -1,31 +1,12 @@
 fun main(args: Array<String>) {
-sayHello(name ="Alex", age = 22)
-val hasInternetConnection=false
-    if (hasInternetConnection==true){
-
-        getData(data ="Some data")
-    }
-    else{
-        showMasseg()
-
-    }
-}
-fun  sayHello(name: String,age: Int) {
- var number=age
-
-    println("Hello , $name your age is $age")
-
+    val max = getMax(5, 9)
+println(max)
 }
 
-fun getData(data:String){
- println("your data is $data")
-  }
-
-fun showMasseg(){
-    println("Theres no internet connection")
+fun getMax(a: Int, b: Int): Int {
+    val max = if (a > b) a else b
+    return max
 
 
-  }
-
-
+}
 
