@@ -1,26 +1,12 @@
 fun main(args: Array<String>) {
 
 
+    var number=0
 
-//
-//    for (i in 1..10) {
-//        println("i = $i")
-//    }
+while (number<10){
+    println(number)
+    number++
 
-
-//    for (i in 1 until 10){
-//        println(i)
-//
-//    }
-
-
-//    for (i in 10 downTo 0 ) {
-//        println( i )  }
-
-
-//    for (i in 1 until 10 step 2) {
-//        println(i)
-//    }
-
+}
 
     }
