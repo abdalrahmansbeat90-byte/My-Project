@@ -1,12 +1,20 @@
 fun main(args: Array<String>) {
-    val text : String? = "Name"
+    var text : String? = null
+
+    text=  "The variabel is null "
+var text2=""
+
 if (text != null) {
-println(text.length)
+    text2 = text
+
 }
     else{
-        print("The variabel is null")
+        text2 = "The variabel is null "
 
     }
+    println(text2)
+
+
 
 }
 
