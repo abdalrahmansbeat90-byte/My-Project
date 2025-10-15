@@ -1,12 +1,26 @@
 fun main(args: Array<String>) {
-sum(1,4,6,7,8,9,5,7,6)
-
-}
-
-fun sum(vararg numbers: Int) {
-numbers.forEach {
-    println(it)
-}
 
 
-}
+
+//
+//    for (i in 1..10) {
+//        println("i = $i")
+//    }
+
+
+//    for (i in 1 until 10){
+//        println(i)
+//
+//    }
+
+
+//    for (i in 10 downTo 0 ) {
+//        println( i )  }
+
+
+//    for (i in 1 until 10 step 2) {
+//        println(i)
+//    }
+
+
+    }
