@@ -1,24 +1,31 @@
 fun main(args: Array<String>) {
-    var text : String? = null
+sayHello(name ="Alex", age = 22)
+val hasInternetConnection=false
+    if (hasInternetConnection==true){
 
-    text=  "The variabel is null "
-var text2=""
-
-if (text != null) {
-    text2 = text
-
-}
+        getData(data ="Some data")
+    }
     else{
-        text2 = "The variabel is null "
+        showMasseg()
 
     }
-    println(text2)
+}
+fun  sayHello(name: String,age: Int) {
+ var number=age
 
-
+    println("Hello , $name your age is $age")
 
 }
 
+fun getData(data:String){
+ println("your data is $data")
+  }
 
+fun showMasseg(){
+    println("Theres no internet connection")
+
+
+  }
 
 
 
