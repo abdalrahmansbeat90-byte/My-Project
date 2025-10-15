@@ -1,24 +1,17 @@
 fun main(args: Array<String>) {
-    val max = getMax(5.5, 9.7)
-    println(max)
+sendMassage(
+
+    name = "Alexa")
+
 }
 
-fun getMax(a: Int, b: Int): Int {
 
-    return if (a > b){
-        return a
-    }
-    else {
-        return b
+fun sendMassage(name: String = " User ", message: String = sendText()) {
+println( "name = $name ,and  message = $message" )
 
-    }
+
 }
 
-    fun getMax(a: Double, b: Double): Double {
-        if (a > b) {
-            return a
-        } else {
-            return b
-        }
-    }
-
+fun sendText(): String{
+    return "Some text!"
+}
