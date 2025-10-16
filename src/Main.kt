@@ -1,21 +1,29 @@
 fun main(args: Array<String>) {
 
-var number = 0
-   outer@ while (number<5) {
-      number++
+    var number = 1
+    val lastNumber = 20
+    var evenNumberCounter=0
+
+
+
+    while (number <= lastNumber) {
+        number++
+
+        if (!isEvenNumber(number)) {
+      continue
+
+              }
+        evenNumberCounter++
         println(number)
-   }
-   var i =0
-
-   while (i < 5) {
-       if (i == 0) {
-           break
-
-       }
-       i++
-       println("***$i")
-
-
-            }
-
+         }
+    println("Total number of even numbers found =$evenNumberCounter ")
     }
+
+fun isEvenNumber(number: Int): Boolean {
+    if (number % 2 == 0) {
+        return true
+    }
+   else{
+       return false
+    }
+}
