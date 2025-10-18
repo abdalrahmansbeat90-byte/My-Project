@@ -2,33 +2,54 @@ import kotlin.math.max
 
 
 fun main(args: Array<String>) {
-val max : Int = findMinandMax(arrayOf(20,40,50,60,10521232),true)
-val min : Int = findMinandMax(arrayOf(22,40,50,60,100),false)
+val car1 = Car()
+    car1.name = "Tesla"
+    car1.model = "S Plaid"
+    car1.Color = "Red"
+    car1.doors = 4
 
-    println("The Max value is: $max")
-    println("The Min value is: $min")
+    println("Name = ${car1.name}")
+    println("model = ${car1.model}")
+    println("Color = ${car1.Color}")
+    println("doors = ${car1.doors}")
+
+    println("\n")
+
+    car1.move()
+    car1.stop()
+
+
+
+val car2 = Car()
+    car2.name = "Ford"
+    car2.model = "Mustang"
+    car2.Color = "Blue"
+    car2.doors = 2
+
+    println("\n")
+    println("Name = ${car2.name}")
+    println("model = ${car2.model}")
+    println("Color = ${car2.Color}")
+    println("doors = ${car2.doors}")
+
+    car2.move()
+    car2.stop()
+
 }
 
-fun findMinandMax(numbers: Array<Int>, searchMax: Boolean): Int {
-    var max: Int = numbers[0]
-    var min: Int = max
-    if (searchMax) {
-        for (number in numbers) {
-            if (number > max) {
-                max = number
-            }
-        }
-        return max
 
-    } else {
-        for (number in numbers) {
-            if (number < min) {
-                min = number
-            }
-        }
+class Car (){
+    var name = ""
+    var model = ""
+    var Color = ""
+    var doors = 0
 
-    return min
 
+    fun move(){
+        println("The Car is moving")
     }
 
+    fun stop (){
+        println("The Car has stopped")
+    }
 }
