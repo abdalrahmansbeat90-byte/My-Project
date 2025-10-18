@@ -1,44 +1,30 @@
+import javax.naming.Name
 import kotlin.math.max
 
 
 fun main(args: Array<String>) {
+    val user = User("Alex", "Dobinca", 23)
+    val friend = User("joHn", "Smith", 30)
 
-    val car1 = Car("Tesla","S Plaid","Red",4)
-
-    println("Name = ${car1.name}")
-    println("model = ${car1.model}")
-    println("Color = ${car1.Color}")
-    println("doors = ${car1.doors}")
-    println("\n")
-
-    car1.move()
-    car1.stop()
-
-    val car2 = Car("Ford","Mustang","Blue",2)
-
-    println("\n")
-
-    println("Name  = ${car2.name} ")
-    println("model = ${car2.model}")
-    println("Color = ${car2.Color}")
-    println("doors = ${car2.doors}")
-
-    println("\n")
-
-    car2.move()
-    car2.stop()
-
+     println("Name: ${friend.name}")
 
 }
-class Car (name: String, var model: String, var Color: String, var doors: Int) {
 
-    var name = name.trim()
 
-    fun move() {
-        println("The Car $name is moving")
+class User(name: String, var lastname: String, var age: Int) {
+    var name: String
+
+
+    init {
+        if (name.lowercase().startsWith("a")) {
+            this.name = name
+        } else {
+            this.name = "User"
+            println("The name dousnt start with the letter 'a' or 'A' ")
+
+        }
     }
+    init {
 
-    fun stop() {
-        println("The Car $name has stopped")
     }
 }
