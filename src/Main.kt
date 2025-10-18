@@ -3,28 +3,33 @@ import kotlin.math.max
 
 
 fun main(args: Array<String>) {
-    val user = User("Alex", "Dobinca", 23)
-    val friend = User("joHn", "Smith", 30)
+    val user = User("Alex")
+    val friend = User("joHn", "Smith")
 
-     println("Name: ${friend.name}")
+    println("Name = ${user.name}")
+    println("Last Name = ${user.lastname}")
+    println("age = ${user.age}")
+
+    println("\n")
+
+    println("Name = ${friend.name}")
+    println("Last Name = ${friend.lastname}")
+    println("age = ${friend.age}")
 
 }
 
-
-class User(name: String, var lastname: String, var age: Int) {
-    var name: String
+class User(var name: String, var lastname: String, var age: Int) {
 
 
-    init {
-        if (name.lowercase().startsWith("a")) {
-            this.name = name
-        } else {
-            this.name = "User"
-            println("The name dousnt start with the letter 'a' or 'A' ")
-
-        }
-    }
-    init {
+    constructor(name: String) : this(name, "LastName", 0) {
+        println("2nd")
 
     }
+
+    constructor(name: String, lastname: String) : this(name, lastname, 0) {
+        println("3nd")
+
+
+    }
+
 }
