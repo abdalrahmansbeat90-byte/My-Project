@@ -1,35 +1,22 @@
-import javax.naming.Name
-import kotlin.math.max
-
-
 fun main(args: Array<String>) {
     val user = User("Alex")
-    val friend = User("joHn", "Smith")
+    val friend = User(firstName = "John", lastname = "Smith")
+val user2 = User(age = 19, firstName = "Ioana", lastname = "Dobbbi")
 
-    println("Name = ${user.name}")
+
+    println("Name = ${user.firstName}")
     println("Last Name = ${user.lastname}")
     println("age = ${user.age}")
 
     println("\n")
 
-    println("Name = ${friend.name}")
+    println("Name = ${friend.firstName}")
     println("Last Name = ${friend.lastname}")
     println("age = ${friend.age}")
 
 }
 
-class User(var name: String, var lastname: String, var age: Int) {
+class User(var firstName: String, var lastname: String="lastName", var age: Int=0) {
 
-
-    constructor(name: String) : this(name, "LastName", 0) {
-        println("2nd")
-
-    }
-
-    constructor(name: String, lastname: String) : this(name, lastname, 0) {
-        println("3nd")
-
-
-    }
 
 }
