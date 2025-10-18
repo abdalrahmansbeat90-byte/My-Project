@@ -1,27 +1,34 @@
+import kotlin.math.max
+
+
 fun main(args: Array<String>) {
+val max : Int = findMinandMax(arrayOf(20,40,50,60,10521232),true)
+val min : Int = findMinandMax(arrayOf(22,40,50,60,100),false)
 
-    val max : Int = findMax (arrayOf(4,6,7,4,3,6))
-    val min : Int = findMin (arrayOf(4,7,9,20,7,100))
-    println("max valuo is =$max")
-    println("min valuo is =$min")
+    println("The Max value is: $max")
+    println("The Min value is: $min")
 }
-fun findMax(numbers:Array<Int>): Int {
-    var max = numbers[0]
 
-    for (number in numbers) {
-        if (number > max) {
-            max = number
+fun findMinandMax(numbers: Array<Int>, searchMax: Boolean): Int {
+    var max: Int = numbers[0]
+    var min: Int = max
+    if (searchMax) {
+        for (number in numbers) {
+            if (number > max) {
+                max = number
+            }
         }
-    }
-return max
-}
-fun findMin(numbers:Array<Int>): Int {
-    var min = numbers[0]
+        return max
 
-    for (number in numbers) {
-        if (number < min) {
-            min = number
+    } else {
+        for (number in numbers) {
+            if (number < min) {
+                min = number
+            }
         }
-    }
+
     return min
+
+    }
+
 }
