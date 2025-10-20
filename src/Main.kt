@@ -1,11 +1,22 @@
 fun main(args: Array<String>) {
-    val user = User("Alex", "Dobbin", 23)
-user.favoriteMove="Interstallar"
 
-println(user.favoriteMove)
-
+    val instance = Database.getInstance()
+    val instance2=Database.getInstance()
+    println(instance)
+    println(instance2)
 }
-class User(var firstName: String, var lastname: String, var age: Int) {
- lateinit var favoriteMove: String
 
+class Database private constructor() {
+
+    companion object {
+        private var instance: Database? = null
+
+        fun getInstance(): Database? {
+            if (instance == null) {
+                instance = Database()
+            }
+
+            return instance
+        }
+    }
 }
