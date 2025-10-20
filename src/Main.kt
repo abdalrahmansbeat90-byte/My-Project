@@ -1,31 +1,12 @@
 fun main(args: Array<String>) {
-
-
-val direction = Direction.valueOf("east".uppercase())
-
-    when (direction) {
-        Direction.EAST ->{
-            println("The Direction EAST")
-        }
-        Direction.WEST -> println("The Direction WEST")
-        Direction.NORTH -> println("The Direction NORTH")
-        Direction.SOUTH-> println("The Direction SOUTH")
-    }
+    val listView = ListView(arrayOf("Name 1", "Name 2", "Name 3", "Name 4"))
+    listView.ListViewItem().displayItems(2)
 }
 
-enum class Direction(var direction: String , var distance: Int) {
-NORTH("north", 10),
-SOUTH("south", 20),
-EAST("east", 15),
-WEST("west", 40);
-
-
-
-    fun printData(){
-
-        println("Direction = $direction and Distance = $distance")
-
+class ListView(val items: Array<String>) {
+    inner class ListViewItem {
+        fun displayItems(position: Int) {
+            println(items[position])
+        }
     }
-
-
 }
