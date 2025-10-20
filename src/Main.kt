@@ -1,8 +1,7 @@
 fun main(args: Array<String>) {
-println(Direction.WEST)
-println(Direction.NORTH)
-println(Direction.SOUTH)
-println(Direction.EAST)
+for (direction:Direction in Direction.values()) {
+    println(direction)
+}
 
 }
 
