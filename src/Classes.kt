@@ -8,14 +8,23 @@ class Car(var name: String, var model: String, var color: String, var doors: Int
     }
 }
 
-class User(var firstName: String, var lastName: String, var age: Int) {
-   lateinit var favoriteMovie: String
-}
+
 
 class Calculator() {
     companion object {
         fun sum(a: Int, b: Int): Int {
             return a + b
         }
+    }
+}
+object Database {
+    init {
+        println("Database Created")
+    }
+}
+
+class User(var firstName: String, var lastName: String, var age: Int) {
+    init {
+        println("User : $firstName was created")
     }
 }
