@@ -1,4 +1,6 @@
+/*
 class Car(var name: String, var model: String, var color: String, var doors: Int) {
+
     fun move() {
         println("The car $name is moving")
     }
@@ -28,3 +30,4 @@ class User(var firstName: String, var lastName: String, var age: Int) {
         println("User : $firstName was created")
     }
 }
+*/
