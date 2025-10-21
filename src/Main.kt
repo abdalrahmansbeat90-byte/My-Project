@@ -1,35 +1,28 @@
-import java.awt.Window
-import javax.script.ScriptEngine
+
+package com.example.main
 
 fun main(args: Array<String>) {
+    val car = Car("BMW", "RED", 1, 4)
+    val plane = Plan("Boeing", "WHITE and BLUE", 4, 4)
 
+    car.move()
+    car.stop()
 
+    plane.move()
+    plane.stop()
 }
 
-class Vehicle(val name: String,val color: String) {
+open class Vehicle(val name: String, val color: String) {
 
-    fun move (){
+    fun move() {
         println("$name is moving")
     }
-    fun stop(){
+
+    fun stop() {
         println("$name has stopped")
     }
 }
-class Car (val name : String, val color : String , val engine: Int ,val doors : Int){
 
-    fun move (){
-        println("$name is moving")
-    }
-    fun stop(){
-        println("$name has stopped")
-    }
+class Car(name: String, color: String, val engine: Int, val doors: Int) : Vehicle(name, color)
 
-}
-class plan(val name : String, val color : String, val engine : Int , val doors : Int){
-    fun move (){
-        println("$name is moving")
-    }
-    fun stop(){
-        println("$name has stopped")
-    }
-}
+class Plan(name: String, color: String, val engine: Int, val doors: Int) : Vehicle(name, color)
