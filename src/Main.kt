@@ -1,40 +1,37 @@
-
 package com.example.main
 
+import java.awt.ComponentOrientation
+
 fun main(args: Array<String>) {
-    val car = Car("BMW", "RED", 1, 4)
-    val plane = Plan("Boeing", "WHITE and BLUE", 4, 4)
+ val view= View()
+    val butten= Button("Login" , "center")
+    val roundButten= RoundButten("Sing up","CENTER",30 )
 
-    car.move()
-    car.stop()
+    view.draw()
+    butten.draw()
+    roundButten.draw()
+    }
+open class View(){
 
-    plane.move()
-    plane.stop()
+   open fun draw (){
+        println("Drawing the View .")
+
+
+   }
+}
+open class Button(val text: String , val orientation: String): View (){
+    override fun draw() {
+        //here is code for creating the butten
+        println("Drawing the Button.")
+        super.draw()
+    }
 }
 
-open class Vehicle(val name: String, val color: String) {
+class RoundButten(text: String ,orientation:  String , val corners: Int): Button(text,orientation){
 
-    open  fun move() {
-        println("$name is moving")
-    }
-
-    open  fun stop() {
-        println("$name has stopped")
+    override fun draw() {
+        println("Drawing the round Button.")
+        super.draw()
     }
 }
-
-class Car(name: String, color: String, val engine: Int, val doors: Int) : Vehicle(name, color){
-
-}
-
-class Plan(name: String, color: String, val engine: Int, val doors: Int) : Vehicle(name, color){
-override fun move(){
-    flying()
-    super.move()
-
-}
-    fun flying(){
-        println("The plane is flying")
-    }
-    }
 
