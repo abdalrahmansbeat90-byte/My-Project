@@ -1,37 +1,28 @@
-package com.example.main
-
-import java.awt.ComponentOrientation
-
 fun main(args: Array<String>) {
- val view= View()
-    val butten= Button("Login" , "center")
-    val roundButten= RoundButten("Sing up","CENTER",30 )
-
-    view.draw()
-    butten.draw()
-    roundButten.draw()
-    }
-open class View(){
-
-   open fun draw (){
-        println("Drawing the View .")
-
-
-   }
+    val success = Result.Success("SUCCESS!")
+    val progress = Result.Progress("PROGRESS!")
+    getData(progress)
 }
-open class Button(val text: String , val orientation: String): View (){
-    override fun draw() {
-        //here is code for creating the butten
-        println("Drawing the Button.")
-        super.draw()
+
+fun getData(result: Result) {
+    when (result) {
+        is Result.Progress -> result.showMessage()
+        is Result.Success -> result.showMessage()
+        is Result.Error.NonRecoverableError -> result.showMessage()
+        is Result.Error.RecoverableError -> result.showMessage()
     }
 }
 
-class RoundButten(text: String ,orientation:  String , val corners: Int): Button(text,orientation){
-
-    override fun draw() {
-        println("Drawing the round Button.")
-        super.draw()
+sealed class Result(val message: String) {
+    fun showMessage() {
+        println("Result : $message")
     }
+
+    class Success(message: String) : Result(message)
+    sealed class Error(message: String) : Result(message){
+    class RecoverableError(exception: Exception,message: String):Error(message)
+    class NonRecoverableError(exception: Exception,message: String):Error(message)
+    }
+    class Progress(message: String) : Result(message)
 }
 
