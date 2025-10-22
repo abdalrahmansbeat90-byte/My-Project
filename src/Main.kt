@@ -14,15 +14,27 @@ fun main(args: Array<String>) {
 
 open class Vehicle(val name: String, val color: String) {
 
-    fun move() {
+    open  fun move() {
         println("$name is moving")
     }
 
-    fun stop() {
+    open  fun stop() {
         println("$name has stopped")
     }
 }
 
-class Car(name: String, color: String, val engine: Int, val doors: Int) : Vehicle(name, color)
+class Car(name: String, color: String, val engine: Int, val doors: Int) : Vehicle(name, color){
 
-class Plan(name: String, color: String, val engine: Int, val doors: Int) : Vehicle(name, color)
+}
+
+class Plan(name: String, color: String, val engine: Int, val doors: Int) : Vehicle(name, color){
+override fun move(){
+    flying()
+    super.move()
+
+}
+    fun flying(){
+        println("The plane is flying")
+    }
+    }
+
