@@ -1,5 +1,5 @@
 fun main(args: Array<String>) {
-
+println(Car("abod","red",))
 
 }
 
@@ -30,7 +30,7 @@ class plane (val name: String , val color: String ) : Engine {
 
 }
 
-class Tesla (val name: String , val color: String ) : Engine {
+class Tesla (val name: String , color: String ) : Engine {
     override fun startEngine() {
         println("Tesla is starting engine .")
     }
