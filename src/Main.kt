@@ -1,38 +1,22 @@
 fun main(args: Array<String>) {
-println(Car("abod","red",))
+    val User1 = User("Name 1")
+    val User2 = User("Name 2")
+    val User3 = User("Name 3")
+    val User4 = User("Name 4")
+    val User5 = User("Name 5")
+    val User6 = User("Alex")
+    val User7 = User("Alex")
+
+
+
+    val names = mutableSetOf<String>(User1.name, User2.name, User3.name, User4.name, User5.name, User6.name)
+
+
+
+
+    names.forEach { println(it) }
+
 
 }
 
-interface  Engine {
-    fun startEngine()
-
-
-}
-class Car (val name: String , val color : String) : Engine {
-    override fun startEngine() {
-       println("the Car is starting engine .")
-    }
-
-
-}
-
-class Truck (val name: String , val color : String ) : Engine {
-    override fun startEngine() {
-        println("the Truck is starting engine .")
-    }
-
-}
-
-class plane (val name: String , val color: String ) : Engine {
-    override fun startEngine() {
-        println("the plane is starting engine .")
-    }
-
-}
-
-class Tesla (val name: String , color: String ) : Engine {
-    override fun startEngine() {
-        println("Tesla is starting engine .")
-    }
-
-}
+class User (val name:String)
