@@ -1,20 +1,17 @@
+
 fun main(args: Array<String>) {
+    val numbers = listOf("one", "two", "three", "four")
+    val longerThan3 = numbers.filter { it.length > 3 }
+    println(longerThan3)
 
-    val numbersStrings = listOf("one", "two", "three", "four")
-    println(numbersStrings)
-    println(numbersStrings.joinToString())
-    val listString = StringBuffer("the list of numbers : ")
-   listString.append("!   ").append("I love You     ")
-    println(numbersStrings.joinTo(listString))
+    val numbersMap = mapOf("Key 1" to 1, "Key 2" to 2, "Key 3" to 3,"Key 101" to 101)
+    val filteredMap = numbersMap.filter { it.key.endsWith("1") && it.value>100 }
 
+    println(filteredMap)
 
-    println(numbersStrings.joinToString(" | ", prefix = "start : ", postfix = " * end"))
-
-    val numbers = (1..100).toList()
-    println(numbers.joinToString(limit = 11, truncated = "<...>"))
-
-    println(numbersStrings.joinToString{"ELEMENT: ${it.uppercase()}"})
-
-
+    val filteredIdx = numbers.filterIndexed{ index, value -> (index != 0)&&(value.length<5)}
+    val filteredNot = numbers.filterNot{it.length<=3}
+    println(filteredIdx)
+    println(filteredNot)
 
 }
