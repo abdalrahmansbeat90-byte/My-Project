@@ -1,23 +1,20 @@
-import javax.xml.crypto.KeySelector
-import kotlin.coroutines.CoroutineContext
-
 fun main(args: Array<String>) {
 
-    val numbers = listOf("one", "two", "three", "four")
+    val numbersStrings = listOf("one", "two", "three", "four")
+    println(numbersStrings)
+    println(numbersStrings.joinToString())
+    val listString = StringBuffer("the list of numbers : ")
+   listString.append("!   ").append("I love You     ")
+    println(numbersStrings.joinTo(listString))
 
-    println(numbers.associateWith { it.length })
 
-    println(numbers.associateBy { it.first().uppercase() })
+    println(numbersStrings.joinToString(" | ", prefix = "start : ", postfix = " * end"))
 
-    println(numbers.associateBy(keySelector = { it.first().uppercase() }, valueTransform = { it.length }))
+    val numbers = (1..100).toList()
+    println(numbers.joinToString(limit = 11, truncated = "<...>"))
 
-    //flotten
+    println(numbersStrings.joinToString{"ELEMENT: ${it.uppercase()}"})
 
-    val numbersSets = listOf(setOf(1,2,3) ,setOf(4,5,6), setOf(7,8,9))
-for (numbers in numbersSets) {
-    for (number in numbers) {
-        println(number)
-    }
-    println("\n")
-}
+
+
 }
